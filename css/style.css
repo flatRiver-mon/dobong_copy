@@ -1,0 +1,199 @@
+/* 경기천년제목 폰트 */
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* 노멀라이징 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li{
+    list-style: none;
+}
+a{
+  color: inherit ;
+  text-decoration: none ;
+}
+body{
+    font-family:'GyeonggiTitleM', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif
+}
+/* 라이브러리 */
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.cell{
+    float: left;
+}
+.cell-r{
+    float: right;
+}
+.img-box{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* 모듈 */
+.main-padding-bottom{
+    padding-bottom: 65%;
+}
+.font-lato{
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* 스타일 */
+
+/* section01 Start */
+
+.section01{
+    background-color: #289ed1;
+    color: #fff;
+}
+.section01 .background-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../img/main_visual_01.png");
+}
+.section01 .main-box{
+    max-width: 1580px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* main-slider-wrap Start */
+.main-slider-wrap{
+    width: 800px;
+    height: 520px;
+    position: relative;
+    animation: fadeUp ease-in-out 1s;
+}
+.main-slider-wrap::before{
+    content: "";
+    display: block;
+    position: absolute;
+    right: -55px;
+    top: -55px;
+    background-image: url("../img/main_visual_effect_img.png");
+    background-position: center;
+    background-size: cover;
+    width: 165px;
+    height: 164px;
+    animation: spiner linear 6s infinite;
+}
+@keyframes spiner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes fadeUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.main-slider-wrap .main-slider .slick-list{
+    box-shadow: 12px 12px 40px -6px rgba(0, 0, 0, 0.2);
+    border-radius: 80px 80px 0px 80px;
+}
+.main-slider-right-wrap{
+    width: calc(100% - 800px);
+}
+.main-slider-text-box .main-text-box{
+    padding-left: 110px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.main-slider-text-box .main-text-box .title{
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 65px;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1.5s;
+    transition-delay: 0.3s;
+}
+.main-slider-text-box .main-text-box .title::before{
+    content: "";
+    display: block;
+    background-image: url("../img/icon_leaf.png");
+    background-position: center;
+    background-size: cover;
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    top: -28px;
+    left: -32px;
+}
+.main-slider-text-box .main-text-box .info{
+    color: #accdff;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 2s;
+    transition-delay: 0.9s;
+}
+.main-slider-text-box .main-text-box .title.active,
+.main-slider-text-box .main-text-box .info.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* main-slider-wrap End */
+
+
+/* section01 End */
+
+/* section02 Start */
+.section02{
+    background-color: #e2ebf9;
+}
+/* section02 End */
+
+/* section03 Start */
+.section03{
+    background-color: #fff;
+}
+/* section03 End */
+
+/* section04 Start */
+.section04{
+    background-color: #f2f2f2;
+}
+/* section04 End */
+
+/* section05 Start */
+.section05{
+    background-color: #fff;
+}
+
+/* section05 End */
+
+/* footer-wrap Start */
+.footer-wrap{
+    background-color: #f2f2f2;
+}
+
+/* footer-wrap End */
