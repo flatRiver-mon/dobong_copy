@@ -22,6 +22,15 @@ a{
 body{
     font-family:'GyeonggiTitleM', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif
 }
+button{
+    background: inherit;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer;
+}
 /* 라이브러리 */
 .row::after{
     content: "";
@@ -39,6 +48,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /* 모듈 */
 .main-padding-bottom{
     padding-bottom: 65%;
@@ -46,8 +56,12 @@ body{
 .font-lato{
     font-family: 'Lato', sans-serif;
 }
-
-
+.font-color-blue{
+    color:#258acb;
+}
+.font-color-blue{
+    color: #222;
+}
 /* 스타일 */
 
 /* section01 Start */
@@ -174,16 +188,22 @@ body{
     bottom: 60px;
 }
 .main-box > .control-box > .page-box{
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: -2px;
+}
+.main-box > .control-box > .page-box > .page-count{
+    color: #fff;
+    opacity: 0.2;
 }
 .main-box > .control-box > .btn{
-    font-size: 28px;
+    font-size: 24px;
+    cursor: pointer;
 }
 .main-box > .control-box > .left-btn{
-    margin-right: 30px;
+    margin-right: 60px;
 }
 .main-box > .control-box > .right-btn{
-    margin-left: 30px;
+    margin-left: 60px;
 }
 /* control-box End */
 
@@ -193,7 +213,38 @@ body{
 /* section02 Start */
 .section02{
     background-color: #e2ebf9;
+    background-image: url("../img/main_company_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
+.section02 .background-logo-box{
+    position: absolute;
+    left: -23%;
+    top: 83px;
+    width: 2000px;
+    z-index: 0;
+}
+.section02 .background-logo-box svg path{
+    fill: #d0ddf1;
+}
+
+.section02 .tab-box{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section02 .tab-box > .left-tab{
+    font-weight: 600;
+}
+.section02 .tab-box > .left-tab > .intro-title{
+    font-size: 28px;
+}
+.section02 .tab-box > .left-tab > .year-box > li > a{
+    font-size: 40px;
+}
+
 /* section02 End */
 
 /* section03 Start */
