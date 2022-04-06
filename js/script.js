@@ -1,14 +1,25 @@
 $(document).ready(function(){
 
+    let tabContentNum = 0;
+
     // a 태그 클릭시 상단으로 이동하는 기능 블록
     $("a[href='#']").click(function(e){
         e.preventDefault();
     });
 
     $(".fullpage").fullpage({
-
+        afterLoad: function(origin, destination, direction){
+            if( destination.index == 1 ){
+                $(".section02 .background-logo-box").addClass("active")
+                $(".section02 .left-tab").addClass("active")
+                $(".section02 .tab-btn-box").addClass("active")
+                $(".section02 .info-title").addClass("active")
+                $(".section02 .info-text").addClass("active")
+                $(".section02 .view-btn").addClass("active")
+            }
+        },
     })
-
+    
     $(".main-slider").slick({
         arrows:false,
         autoplay:true,
@@ -37,5 +48,35 @@ $(document).ready(function(){
     $(".main-slider-text-box").on('beforeChange', function(event, slick, currentSlide, nextSlide){
         $(".main-slider").slick("slickGoTo", nextSlide)
     });
+
+    
+    $(".section02 .tab-box > .left-tab > .year-box > li").click(function(){
+        let indexNum = $(this).index()
+        tabContentNum = indexNum
+        // 자신에게 active 부여 및 다른 active 없앰
+        $(".section02 .tab-box > .left-tab > .year-box > li").find(".react-text").removeClass("active")
+        $(this).find(".react-text").addClass("active")
+
+        // 자신의 indexNum 에 맞는 tab-content 활성화
+        $(".section02 .tab-box > .right-tab > .tab-content").removeClass("active")
+        $(".section02 .tab-box > .right-tab > .tab-content").eq(indexNum).addClass("active")
+
+        // 좌측 탭 변경시 우측 탭을 초기화 상태로 변경
+        $(".section02 .tab-box > .right-tab > .tab-content").find(".tab-btn").removeClass("active")
+        $(".section02 .tab-box > .right-tab > .tab-content").find(".tab-info").removeClass("active")
+        $(".section02 .tab-box > .right-tab > .tab-content").eq(indexNum).find(".tab-btn").eq(0).addClass("active")
+        $(".section02 .tab-box > .right-tab > .tab-content").eq(indexNum).find(".tab-info").eq(0).addClass("active")
+    })
+
+    $(".section02 .tab-box > .right-tab > .tab-content > .tab-btn-box > .tab-btn").click(function(){
+        let indexNum = $(this).index()
+
+        // 자신에게 active 부여 및 다른 active 없앰
+        $(this).siblings().removeClass("active")
+        $(this).addClass("active")
+
+        $(".section02 .tab-box > .right-tab > .tab-content").find(".tab-info").removeClass("active")
+        $(".section02 .tab-box > .right-tab > .tab-content").eq(tabContentNum).find(".tab-info").eq(indexNum).addClass("active")
+    })
 
 })

@@ -10,6 +10,9 @@
         <!-- 제이쿼리 위치 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- 외부 js 라이브러리 // 웹폰트 // 폰트어썸 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -91,10 +94,10 @@
                 </div>
                 <div class="tab-box row">
                     <div class="left-tab cell">
-                        <p class="intro-title font-color-blue">사업소개</p>
+                        <p class="intro-title">사업소개</p>
                         <ul class="year-box font-lato">
                             <li>
-                                <a href="#">20<span class="react-text">21</span></a>
+                                <a href="#">20<span class="react-text active">21</span></a>
                             </li>
                             <li>
                                 <a href="#">20<span class="react-text">20</span></a>
@@ -102,23 +105,24 @@
                             <li>
                                 <a href="#">20<span class="react-text">19</span></a>
                             </li>
+                            <li class="right-bar"></li>
                         </ul>
                     </div>
-                    <div class="right-tab cell">
-                        <div class="tab-content">
-                            <div class="tab-btn-box">
-                                <div class="tab-btn"># 아이디어실험'씽킹랩'</div>
-                                <div class="tab-btn"># 주민기획100단</div>
-                                <div class="tab-btn"># 씨알방학간</div>
-                                <div class="tab-btn">+ 더보기</div>
+                    <div class="right-tab cell-r">
+                        <div class="tab-content active">
+                            <div class="tab-btn-box row">
+                                <div class="tab-btn cell active"># 아이디어실험'씽킹랩'</div>
+                                <div class="tab-btn cell"># 주민기획100단</div>
+                                <div class="tab-btn cell"># 씨알방학간</div>
+                                <div class="tab-btn cell">+ 더보기</div>
                             </div>
                             <div class="tab-info-box">
-                                <div class="tab-info">
+                                <div class="tab-info active">
                                     <p class="info-title">
                                         주민의 기발한 생각이<br>
                                         문화도시 도봉의 힘!
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         주민이 주체가 되어 직접 아이디어를 제안하고 기획하는 문화워크숍입니다.<br>
                                         기획된 아이디어는 주민기획100단 사업으로 연결됩니다.
                                     </p>
@@ -131,7 +135,7 @@
                                         문화로 재미난 일을 꿈꾸는<br>
                                         사람들이 모이다.
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         '씽킹랩 워크샵'을 통해 제안된 아이디어를 직접 실행해볼 수 있는 사업입니다.
                                     </p>
                                     <button type="button" class="view-btn">
@@ -150,18 +154,15 @@
                                     <p class="info-title">
                                     </p>
                                     <p class="font-lato"></p>
-                                    <button type="button" class="view-btn">
-                                        View
-                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-content">
-                            <div class="tab-btn-box">
-                                <div class="tab-btn"># 주민기획100단</div>
-                                <div class="tab-btn"># 아이디어실험'씽킹랩'</div>
-                                <div class="tab-btn"># 문화도시 홍보 전시관 조성</div>
-                                <div class="tab-btn">+ 더보기</div>
+                            <div class="tab-btn-box row">
+                                <div class="tab-btn cell"># 주민기획100단</div>
+                                <div class="tab-btn cell"># 아이디어실험'씽킹랩'</div>
+                                <div class="tab-btn cell"># 문화도시 홍보 전시관 조성</div>
+                                <div class="tab-btn cell">+ 더보기</div>
                             </div>
                             <div class="tab-info-box">
                                 <div class="tab-info">
@@ -169,7 +170,7 @@
                                         문화로 재미난 일을 꿈꾸는<br>
                                         사람들이 모이다.
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         '씽킹랩 워크샵'을 통해 제안된 아이디어를 직접 실행해볼 수 있는 사업입니다.
                                     </p>
                                     <button type="button" class="view-btn">
@@ -181,7 +182,7 @@
                                         주민의 기발한 생각이<br>
                                         문화도시 도봉의 힘!
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         주민이 주체가 되어 직접 아이디어를 제안하고 기획하는 문화워크숍입니다.<br>
                                         기획된 아이디어는 주민기획100단 사업으로 연결됩니다.
                                     </p>
@@ -194,7 +195,7 @@
                                         문화도시 홍보 전시관 조성<br>
                                         사업 : ‘씨ᄋᆞᆯ방학간’
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         관내 폐시설(유휴공간:소방학교부지-구조구급교육센터, 특수구조대 건물)을 문화도시 홍보전시관으로<br>
                                         조성하였습니다.
                                     </p>
@@ -206,18 +207,15 @@
                                     <p class="info-title">
                                     </p>
                                     <p class="font-lato"></p>
-                                    <button type="button" class="view-btn">
-                                        View
-                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-content">
-                            <div class="tab-btn-box">
-                                <div class="tab-btn"># 주민기획100단</div>
-                                <div class="tab-btn"># 아이디어실험'씽킹랩'</div>
-                                <div class="tab-btn"># 창포원페스티벌</div>
-                                <div class="tab-btn">+ 더보기</div>
+                            <div class="tab-btn-box row">
+                                <div class="tab-btn cell"># 주민기획100단</div>
+                                <div class="tab-btn cell"># 아이디어실험'씽킹랩'</div>
+                                <div class="tab-btn cell"># 창포원페스티벌</div>
+                                <div class="tab-btn cell">+ 더보기</div>
                             </div>
                             <div class="tab-info-box">
                                 <div class="tab-info">
@@ -225,7 +223,7 @@
                                         문화로 재미난 일을 꿈꾸는<br>
                                         사람들이 모이다.
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         '씽킹랩 워크샵'을 통해 제안된 아이디어를 직접 실행해볼 수 있는 사업입니다.
                                     </p>
                                     <button type="button" class="view-btn">
@@ -237,7 +235,7 @@
                                         주민의 기발한 생각이<br>
                                         문화도시 도봉의 힘!
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         주민이 주체가 되어 직접 아이디어를 제안하고 기획하는 문화워크숍입니다.<br>
                                         기획된 아이디어는 주민기획100단 사업으로 연결됩니다.
                                     </p>
@@ -251,7 +249,7 @@
                                         향유하는 주민들의 1박 2일<br>
                                         캠핑페스티벌!
                                     </p>
-                                    <p class="font-lato">
+                                    <p class="font-lato info-text">
                                         주민과 예술가가 한데 어우러져 캠핑과 다양한 문화예술을 즐길 수 있는 캠핑페스티벌입니다.
                                     </p>
                                     <button type="button" class="view-btn">
@@ -262,9 +260,6 @@
                                     <p class="info-title">
                                     </p>
                                     <p class="font-lato"></p>
-                                    <button type="button" class="view-btn">
-                                        View
-                                    </button>
                                 </div>
                             </div>
                         </div>
