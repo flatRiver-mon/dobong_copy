@@ -386,7 +386,7 @@ button{
     content: "";
     display: block;
     position: absolute;
-    background-color: #258acb;
+    background-color: rgba(37,138,203,0.4);
     border-radius: 50%;
     top: 0px;
     left: 0px;
@@ -395,13 +395,26 @@ button{
     animation: wave 3s infinite linear;
     z-index: -1;
 }
+.view-btn::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(37,138,203,0.6);
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    animation: wave 3s 0.75s infinite linear;
+    z-index: -1;
+}
 @keyframes wave{
     0%{
-        transform: scale(0);
+        transform: scale(0.5);
         opacity: 1;
     }
     100%{
-        transform: scale(1.5);
+        transform: scale(1.75);
         opacity: 0;
     }
 }
