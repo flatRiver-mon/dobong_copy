@@ -382,6 +382,29 @@ button{
     opacity: 1;
     transform: translateY(0px);
 }
+.view-btn::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #258acb;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    animation: wave 3s infinite linear;
+    z-index: -1;
+}
+@keyframes wave{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
 /* section02 End */
 
 /* section03 Start */
