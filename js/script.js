@@ -17,6 +17,13 @@ $(document).ready(function(){
                 $(".section02 .info-title").addClass("active")
                 $(".section02 .info-text").addClass("active")
                 $(".section02 .view-btn").addClass("active")
+            }else if( destination.index == 2){
+                $(".section03 .title-box h3").addClass("active")
+                $(".section03 .title-box p").addClass("active")
+                $(".section03 .gover-slider-wrap").addClass("active")
+            }else if( destination.index == 3){
+                $(".section04 .title-box h3").addClass("active")
+                $(".section04 .title-box p").addClass("active")
             }
         },
     })
@@ -82,7 +89,14 @@ $(document).ready(function(){
     $(".gover-slider").slick({
         arrows:false,
         slidesToShow:3,
-        
+        autoplay:true,
+        autoplaySpeed:4000,
+    })
+    $(".section03 .gover-slider-wrap .btn-box > .left-btn").click(function(){
+        $(".gover-slider").slick("slickPrev")
+    })
+    $(".section03 .gover-slider-wrap .btn-box > .right-btn").click(function(){
+        $(".gover-slider").slick("slickNext")
     })
 
 })

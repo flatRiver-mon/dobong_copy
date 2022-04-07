@@ -61,6 +61,45 @@ button{
 .font-color-blue{
     color: #222;
 }
+.title-box{
+    max-width: 1580px;
+    margin: 0 auto;
+    text-align: center;
+}
+.title-box > h3{
+    font-size: 60px;
+    color: #333;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.title-box > h3.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.title-box > p{
+    font-size: 18px;
+    color: #666;
+    line-height: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.title-box > p.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.transition-05{
+    transition: 0.5s;
+}
+.tran-delay-025{
+    transition-delay: 0.25s;
+}
+.tran-delay-05{
+    transition-delay: 0.5s;
+}
+.tran-delay-075{
+    transition-delay: 0.75s;
+}
 /* 스타일 */
 
 /* section01 Start */
@@ -434,25 +473,18 @@ button{
 .section03{
     background-color: #fff;
 }
-.section03 .title-box{
-    max-width: 1580px;
-    margin: 0 auto;
-    text-align: center;
-}
-.section03 .title-box > h3{
-    font-size: 60px;
-    color: #333;
-    margin-bottom: 30px;
-}
-.section03 .title-box > p{
-    font-size: 18px;
-    color: #666;
-    line-height: 30px;
-}
+
 .section03 .gover-slider-wrap{
     max-width: 1580px;
     margin: 0 auto;
     padding: 0 13.5%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.section03 .gover-slider-wrap.active{
+    opacity: 1;
+    transform: translateY(0px);
 }
 .section03 .gover-slider-wrap .gover-slider{
     margin-top: 40px;
@@ -511,6 +543,36 @@ button{
     margin-top: 40px;
     text-align: right;
     opacity: 0.6;
+}
+.section03 .btn-box > .btn{
+    width: 120px;
+    height: 120px;
+    color: #333;
+    position: absolute;
+    background-color: #fff;
+    line-height: 120px;
+    text-align: center;
+    font-size: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.18);
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.section03 .btn-box > .left-btn{
+    left: 60px;
+}
+.section03 .btn-box > .right-btn{
+    right: 60px;
+}
+.section03 .btn-box > .btn > i{
+    transition: 0.3s;
+}
+.section03 .btn-box > .left-btn:hover > i{
+    transform: translateX(-5px);
+}
+.section03 .btn-box > .right-btn:hover > i{
+    transform: translateX(5px);
 }
 /* section03 End */
 
