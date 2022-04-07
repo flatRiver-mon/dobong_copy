@@ -19,7 +19,7 @@ a{
   text-decoration: none ;
 }
 body{
-    font-family:'GyeonggiTitleM', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif
+    font-family:'Lato', sans-serif;
 }
 button{
     background: inherit;
@@ -52,8 +52,8 @@ button{
 .main-padding-bottom{
     padding-bottom: 65%;
 }
-.font-lato{
-    font-family: 'Lato', sans-serif;
+.font-title{
+    font-family: 'GyeonggiTitleM', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
 }
 .font-color-blue{
     color:#258acb;
@@ -241,6 +241,21 @@ button{
     max-width: 1200px;
     margin: 0 auto;
 }
+.section02 .tab-box > .intro-title{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #258acb;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translateY(20px);
+}
+.section02 .tab-box > .intro-title.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+}
 .section02 .tab-box > .left-tab{
     font-weight: 600;
     opacity: 0;
@@ -252,11 +267,6 @@ button{
     opacity: 1;
     visibility: visible;
     transform: translateX(0px);
-}
-.section02 .tab-box > .left-tab > .intro-title{
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: #258acb;
 }
 .section02 .tab-box > .left-tab > .year-box{
     position: relative;
@@ -423,6 +433,84 @@ button{
 /* section03 Start */
 .section03{
     background-color: #fff;
+}
+.section03 .title-box{
+    max-width: 1580px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section03 .title-box > h3{
+    font-size: 60px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.section03 .title-box > p{
+    font-size: 18px;
+    color: #666;
+    line-height: 30px;
+}
+.section03 .gover-slider-wrap{
+    max-width: 1580px;
+    margin: 0 auto;
+    padding: 0 13.5%;
+}
+.section03 .gover-slider-wrap .gover-slider{
+    margin-top: 40px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.section03 .gover-slider-wrap .gover-slider .label{
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.section03 .gover-slider-wrap .gover-slider .content{
+    color: #333;
+    margin: 0 20px;
+    letter-spacing: -0.5px;
+}
+.section03 .gover-slider-wrap .gover-slider .content:hover .label{
+    background-color: #fff;
+    color: #333;
+}
+.section03 .gover-slider-wrap .gover-slider .content > a{
+    display: block;
+    background-color: #eee;
+    border:1px solid #ddd;
+    border-radius: 45px 45px 0px 45px;
+    padding: 40px 13% 45px;
+    transition: 0.5s;
+}
+.section03 .gover-slider-wrap .gover-slider .content:hover > a{
+    background-color: #258acb;
+    color: white;
+}
+.section03 .gover-slider-wrap .gover-slider .content-title{
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.section03 .gover-slider-wrap .gover-slider .content-info{
+    margin-top: 20px;
+    opacity: 0.6;
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.section03 .gover-slider-wrap .gover-slider .date{
+    margin-top: 40px;
+    text-align: right;
+    opacity: 0.6;
 }
 /* section03 End */
 

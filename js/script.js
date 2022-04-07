@@ -11,6 +11,7 @@ $(document).ready(function(){
         afterLoad: function(origin, destination, direction){
             if( destination.index == 1 ){
                 $(".section02 .background-logo-box").addClass("active")
+                $(".section02 .intro-title").addClass("active")
                 $(".section02 .left-tab").addClass("active")
                 $(".section02 .tab-btn-box").addClass("active")
                 $(".section02 .info-title").addClass("active")
@@ -24,13 +25,15 @@ $(document).ready(function(){
         arrows:false,
         autoplay:true,
         autoplaySpeed:4000,
+        asNavFor:".main-slider-text-box",
     })
 
     $(".main-slider").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        $(".main-slider-text-box").slick("slickGoTo", nextSlide)
-        $(".main-slider-text-box .main-text-box").find("p").removeClass("active")
-        $(".main-slider-text-box .main-text-box").eq(nextSlide+1).find("p").addClass("active")
         $(".main-box > .control-box > .page-box > .page-count").text("0"+(nextSlide+1))
+    });
+    $(".main-slider").on('afterChange', function(event, slick, currentSlide){
+        $(".main-slider-text-box .main-text-box").find("p").removeClass("active")
+        $(".main-slider-text-box .main-text-box").eq(currentSlide).find("p").addClass("active")
     });
 
     $(".main-box > .control-box > .left-btn").click(function(){
@@ -43,12 +46,9 @@ $(document).ready(function(){
 
     $(".main-slider-text-box").slick({
         arrows:false,
+        fade:true,
+        asNavFor:".main-slider",
     })
-
-    $(".main-slider-text-box").on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        $(".main-slider").slick("slickGoTo", nextSlide)
-    });
-
     
     $(".section02 .tab-box > .left-tab > .year-box > li").click(function(){
         let indexNum = $(this).index()
@@ -77,6 +77,12 @@ $(document).ready(function(){
 
         $(".section02 .tab-box > .right-tab > .tab-content").find(".tab-info").removeClass("active")
         $(".section02 .tab-box > .right-tab > .tab-content").eq(tabContentNum).find(".tab-info").eq(indexNum).addClass("active")
+    })
+
+    $(".gover-slider").slick({
+        arrows:false,
+        slidesToShow:3,
+        
     })
 
 })
