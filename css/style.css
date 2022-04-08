@@ -19,7 +19,7 @@ a{
   text-decoration: none ;
 }
 body{
-    font-family:'Lato', sans-serif;
+    font-family:'Lato','Noto Sans KR', sans-serif;
 }
 button{
     background: inherit;
@@ -58,8 +58,11 @@ button{
 .font-color-blue{
     color:#258acb;
 }
-.font-color-blue{
+.font-color-black{
     color: #222;
+}
+.font-color-green{
+    color: #90c740;
 }
 .title-box{
     max-width: 1580px;
@@ -100,6 +103,103 @@ button{
 .tran-delay-075{
     transition-delay: 0.75s;
 }
+.backcolor-blue{
+    background-color: #258acb;
+}
+.backcolor-green{
+    background-color: #90c740;
+}
+.sans{
+    font-family: sans-serif;
+}
+/* board-wrap Start */
+.board-wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.board-wrap > .left{
+    width: calc(50% - 30px);
+}
+.board-wrap > .right{
+    width: calc(50% - 30px);
+}
+.board-wrap .head-box{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
+}
+.board-wrap .head-box > h4{
+    font-size: 30px;
+}
+.board-wrap .head-box .detail-btn{
+    transition: 0.3s;
+    opacity: 0.5;
+}
+.board-wrap .head-box .detail-btn > span{
+    font-size: 13px;
+}
+.board-wrap .head-box .detail-btn > i{
+    margin-left: 4px;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 30px;
+}
+.board-wrap .head-box .detail-btn:hover{
+    opacity: 1;
+}
+.board-wrap .content-box .top-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.board-wrap .content-box .top-content .circle{
+    text-align: center;
+    color: #fff;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.board-wrap .content-box .top-content .circle .date{
+    font-weight: 600;
+    display: block;
+    font-size: 40px;
+    padding-top: 20px;
+}
+.board-wrap .content-box .top-content .circle .year{
+    opacity: 0.6;
+}
+.board-wrap .content-box .content-txt{
+    width: calc(100% - 130px);
+    letter-spacing: -0.65px;
+}
+.board-wrap .content-box .content-txt > h5{
+    font-size: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+    transition: 0.4s;
+}
+.board-wrap .content-box .content-txt > p{
+    margin-top: 10px;
+    color: #999;
+    font-size: 16px;
+    line-height: 24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.board-wrap .left .top-content:hover .content-txt h5{
+    color: #258acb;
+}
+/* board-wrap End */
+
+
 /* 스타일 */
 
 /* section01 Start */
@@ -284,7 +384,6 @@ button{
     font-weight: 600;
     font-size: 30px;
     margin-bottom: 40px;
-    color: #258acb;
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
