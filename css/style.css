@@ -64,6 +64,9 @@ button{
 .font-color-green{
     color: #90c740;
 }
+.cover-box{
+    padding-top: 120px;
+}
 .title-box{
     max-width: 1580px;
     margin: 0 auto;
@@ -81,7 +84,8 @@ button{
     transform: translateY(0px);
 }
 .title-box > p{
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: -0.65px;
     color: #666;
     line-height: 30px;
     opacity: 0;
@@ -123,6 +127,16 @@ button{
 }
 .board-wrap > .right{
     width: calc(50% - 30px);
+}
+.board-wrap > .left,
+.board-wrap > .right{
+    opacity: 0;
+    transform: translateY(20px);
+}
+.board-wrap > .left.active,
+.board-wrap > .right.active{
+    opacity: 1;
+    transform: translateY(0px);
 }
 .board-wrap .head-box{
     padding-bottom: 30px;
@@ -194,8 +208,32 @@ button{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+.board-wrap .content-box ul{
+    letter-spacing: -0.65px;
+}
+.board-wrap .content-box ul > li{
+    font-size: 17px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.board-wrap .content-box ul > li > a{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+    transition: 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.board-wrap .content-box ul > li:hover > a{
+    background-color: #fff;
+    padding-left: 25px;
+}
 .board-wrap .left .top-content:hover .content-txt h5{
     color: #258acb;
+}
+.board-wrap .right .top-content:hover .content-txt h5{
+    color: #90c740;
 }
 /* board-wrap End */
 
@@ -572,7 +610,6 @@ button{
 .section03{
     background-color: #fff;
 }
-
 .section03 .gover-slider-wrap{
     max-width: 1580px;
     margin: 0 auto;
@@ -685,7 +722,13 @@ button{
 .section05{
     background-color: #fff;
 }
-
+.section05 .cover-box{
+    padding-top: 80px;
+}
+.section05 .board-wrap .content-box .top-content{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 /* section05 End */
 
 /* footer-wrap Start */

@@ -24,6 +24,13 @@ $(document).ready(function(){
             }else if( destination.index == 3){
                 $(".section04 .title-box h3").addClass("active")
                 $(".section04 .title-box p").addClass("active")
+                $(".section04 .board-wrap > .left").addClass("active")
+                $(".section04 .board-wrap > .right").addClass("active")
+            }else if( destination.index == 4){
+                $(".section05 .title-box h3").addClass("active")
+                $(".section05 .title-box p").addClass("active")
+                $(".section05 .board-wrap > .left").addClass("active")
+                $(".section05 .board-wrap > .right").addClass("active")
             }
         },
     })
