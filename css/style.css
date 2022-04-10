@@ -886,3 +886,61 @@ button{
     vertical-align: middle;
 }
 /* footer-wrap End */
+
+/* follow-btn Start */
+.follow-btn{
+    position: fixed;
+    right: 2.6%;
+    width: 106px;
+    height: 106px;
+    font-size: 15px;
+    letter-spacing: -0.65px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 100%;
+    box-shadow: 29px 29px 36px -15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 20px;
+}
+.online-btn{
+    bottom: 200px;
+}
+.online-btn::before{
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg_leaf_blue.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 69px;
+    height: 52px;
+    top: -34px;
+    right: -31px;
+}
+.join-btn{
+    bottom: 40px;
+}
+.join-btn::before{
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/bg_leaf.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 69px;
+    height: 52px;
+    top: -34px;
+    right: -31px;
+}
+
+/* follow-btn End */
+
+/* page-nav Start */
+
+
+/* page-nav End */
