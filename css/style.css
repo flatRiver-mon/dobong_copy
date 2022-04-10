@@ -52,6 +52,9 @@ button{
 .main-padding-bottom{
     padding-bottom: 65%;
 }
+.book-padding-bottom{
+    padding-bottom: 142%;
+}
 .font-title{
     font-family: 'GyeonggiTitleM', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;
 }
@@ -722,12 +725,50 @@ button{
 .section05{
     background-color: #fff;
 }
-.section05 .cover-box{
-    padding-top: 80px;
-}
 .section05 .board-wrap .content-box .top-content{
     padding-top: 40px;
     padding-bottom: 40px;
+}
+.section05 .book-slider-wrap{
+    position: relative;
+    margin-top: 35px;
+    padding: 0 10px;
+}
+.section05 .book-slider-wrap::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #258acb;
+}
+.section05 .book-slider-wrap .book-slider .book-slide{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.section05 .book-slider-wrap .book-slider .book-slide p{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+}
+.section05 .book-slider-wrap .btn-box .btn{
+    position: absolute;
+    font-size: 26px;
+    color: #999;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.section05 .book-slider-wrap .btn-box .left-btn{
+    left: -10px;
+}
+.section05 .book-slider-wrap .btn-box .right-btn{
+    right: -10px;
 }
 /* section05 End */
 

@@ -106,4 +106,16 @@ $(document).ready(function(){
         $(".gover-slider").slick("slickNext")
     })
 
+    $(".book-slider").slick({
+        arrows:false,
+        slidesToShow:2,
+        autoplay:true,
+        autoplaySpeed:4000,
+    })
+    $(".section05 .book-slider-wrap .btn-box .left-btn").click(function(){
+        $(".book-slider").slick("slickPrev")
+    })
+    $(".section05 .book-slider-wrap .btn-box .right-btn").click(function(){
+        $(".book-slider").slick("slickNext")
+    })
 })
