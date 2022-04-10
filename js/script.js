@@ -118,4 +118,14 @@ $(document).ready(function(){
     $(".section05 .book-slider-wrap .btn-box .right-btn").click(function(){
         $(".book-slider").slick("slickNext")
     })
+
+    $(".related-sites-btn").click(function(){
+        if($(this).hasClass("active")){
+            $(this).removeClass("active")
+            $(".footer-wrap .footer-top .related-sites-box ul").slideToggle()
+        }else if(!$(this).hasClass("active")){
+            $(this).addClass("active")
+            $(".footer-wrap .footer-top .related-sites-box ul").slideToggle()
+        }
+    })
 })
