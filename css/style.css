@@ -942,5 +942,69 @@ button{
 
 /* page-nav Start */
 
-
+#page-nav{
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 3.6%;
+    opacity: 1;
+    margin-top: -110px;
+}
+#page-nav ul li{
+    position: relative;
+    width: 20px;
+    margin: 20px 0;
+}
+#page-nav ul li a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+}
+#page-nav ul li a::before{
+    box-sizing: border-box;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    margin-left: -19px;
+    margin-top: -19px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    transform: scale(0.0, 0.0);
+    transition:all 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#page-nav ul li a.active::before{
+    transform: scale(1.0, 1.0);
+}
+#page-nav ul li a:hover::before{
+    transform: scale(1.0, 1.0);
+}
+#page-nav ul li a span{
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+#page-nav ul li a.active span{
+    opacity: 1;
+}
+#page-nav ul.blue li a::before{
+    border: 6px solid #258acb;
+}
+#page-nav ul.blue li a span{
+    background-color: #258acb;
+}
+#page-nav ul.black li a::before{
+    border: 6px solid #333;
+}
+#page-nav ul.black li a span{
+    background-color: #333;
+}
 /* page-nav End */

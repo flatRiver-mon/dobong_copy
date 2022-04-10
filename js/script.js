@@ -7,8 +7,25 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    $("#page-nav > ul > li").click(function(){
+        let indexNum = $(this).index()
+        fullpage_api.moveTo(indexNum+1);
+        if(indexNum == 0){
+            $("#page-nav > ul").removeClass("blue")
+            $("#page-nav > ul").removeClass("black")
+        }else if(indexNum == 1){
+            $("#page-nav > ul").addClass("blue")
+            $("#page-nav > ul").removeClass("black")
+        }else if(indexNum >= 2 || indexNum < 6){
+            $("#page-nav > ul").removeClass("blue")
+            $("#page-nav > ul").addClass("black")
+        }
+        $(this).siblings("li").find("a").removeClass("active")
+        $(this).find("a").addClass("active")
+    })
     $(".fullpage").fullpage({
         afterLoad: function(origin, destination, direction){
+            $("#page-nav > ul > li").eq(destination.index).trigger("click")
             if( destination.index == 1 ){
                 $(".section02 .background-logo-box").addClass("active")
                 $(".section02 .intro-title").addClass("active")
@@ -31,6 +48,13 @@ $(document).ready(function(){
                 $(".section05 .title-box p").addClass("active")
                 $(".section05 .board-wrap > .left").addClass("active")
                 $(".section05 .board-wrap > .right").addClass("active")
+            }else if( destination.index == 5){
+                $("#page-nav").fadeOut()
+            }
+        },
+        onLeave: function(origin, destination, direction){
+            if(origin.index == 5){
+                $("#page-nav").fadeIn()
             }
         },
     })
