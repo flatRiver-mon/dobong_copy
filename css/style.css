@@ -1016,6 +1016,7 @@ button{
     top: 0;
     left: 0;
     height: 155px;
+    width: 100%;
 }
 .header-nav{
     position: relative;
@@ -1091,6 +1092,9 @@ button{
     padding-bottom: 20px;
     display: none;
 }
+#menu > li > ul.active{
+    display: block;
+}
 #menu > li > ul > li{
     position: relative;
     padding: 8px 10px;
@@ -1102,10 +1106,14 @@ button{
     font-weight: 500;
     text-align: center;
     line-height: 23px;
+    opacity: 0.9;
+}
+#menu > li > ul > li > a:hover{
+    opacity: 1;
 }
 .search-wrap{
     height: 154px;
-    margin-left: 420px;
+    margin-left: 410px;
     position: relative;
 }
 .header-nav.black .search-wrap .search-box{
@@ -1174,5 +1182,42 @@ button{
     right: 18px;
     font-size: 26px;
     color: #fff;
+}
+
+.sub-menu{
+    margin-left: 40px;
+    line-height: 154px;
+}
+.header-nav.black .sub-menu > li > a{
+    color: #333;    
+}
+.sub-menu > li > a{
+    color: #fff;    
+    font-size: 12px;
+    transition: 0.5s;
+}
+.sub-menu > li{
+    margin-left: 30px;
+}
+.sub-menu > li:first-child{
+    margin-left: 0;
+}
+.sub-menu > li > .ham-btn{
+    width: 40px;
+    height: 40px;
+    margin-top: 58px;
+    box-sizing: border-box;
+}
+.header-nav.black .sub-menu > li > .ham-btn > .patty{
+    background-color: #333;
+}
+.sub-menu > li > .ham-btn > .patty{
+    display: block;
+    width: 34px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 5px auto;
+    transition: 0.5s ease-in-out;
 }
 /* header-nav-wrap End */

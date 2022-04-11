@@ -7,11 +7,13 @@ $(document).ready(function(){
         e.preventDefault();
     });
     $("#menu > li > a").mouseover(function(){
-        $(this).siblings("ul").stop().slideToggle()
+        $("#menu > li > ul").hide()
+        $(this).siblings("ul").stop().slideDown()
     })
-    $("#menu > li > a").mouseleave(function(){
-        $(this).siblings("ul").stop().slideToggle()
+    $("#menu > li > ul").mouseleave(function(){
+        $(this).hide()
     })
+    
     $(".search-wrap .search-box .search-input").focus(function(){
         $(".search-wrap .search-box").addClass("focusing")
     })
